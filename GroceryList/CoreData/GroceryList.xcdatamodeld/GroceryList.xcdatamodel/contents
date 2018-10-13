@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Grocery" representedClassName="Grocery" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="groceryListItem" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryListItem" inverseName="grocery" inverseEntity="GroceryListItem" syncable="YES"/>
+    </entity>
+    <entity name="GroceryList" representedClassName="GroceryList" syncable="YES" codeGenerationType="class">
+        <attribute name="createdDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GroceryListItem" inverseName="list" inverseEntity="GroceryListItem" syncable="YES"/>
+    </entity>
+    <entity name="GroceryListItem" representedClassName="GroceryListItem" syncable="YES" codeGenerationType="class">
+        <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="grocery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grocery" inverseName="groceryListItem" inverseEntity="Grocery" syncable="YES"/>
+        <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryList" inverseName="items" inverseEntity="GroceryList" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Grocery" positionX="372.578125" positionY="-17.921875" width="128" height="88"/>
+        <element name="GroceryList" positionX="-11.6484375" positionY="-44.4765625" width="128" height="88"/>
+        <element name="GroceryListItem" positionX="179.88671875" positionY="-48.1171875" width="128" height="88"/>
+    </elements>
+</model>

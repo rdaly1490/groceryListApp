@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JNk-Rt-CXc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="dw2-ph-q2c">
+            <objects>
+                <viewController id="JNk-Rt-CXc" customClass="SplashViewController" customModule="GroceryList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="67y-f3-Yj0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.2784313725" green="0.79215686269999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="fwg-4s-HwF"/>
+                    </view>
+                    <connections>
+                        <segue destination="cqG-1y-Ihl" kind="show" identifier="rootVCSegue" id="3lA-aS-666"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i96-l0-YNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1375" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8xA-Ku-D1c">
+            <objects>
+                <navigationController id="cqG-1y-Ihl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PfC-6d-WWy">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y41-aa-k85" kind="relationship" relationship="rootViewController" id="18Z-WB-FRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qzi-5V-bGh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="109"/>
+        </scene>
+        <!--My Lists-->
+        <scene sceneID="Mwx-38-yYu">
+            <objects>
+                <viewController id="Y41-aa-k85" customClass="RootViewController" customModule="GroceryList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dry-1c-Ege">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UE5-iP-8ka">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UE5-iP-8ka" firstAttribute="top" secondItem="oCb-hd-W1N" secondAttribute="top" id="740-AJ-wjH"/>
+                            <constraint firstItem="oCb-hd-W1N" firstAttribute="bottom" secondItem="UE5-iP-8ka" secondAttribute="bottom" id="Fhi-yY-MZT"/>
+                            <constraint firstItem="oCb-hd-W1N" firstAttribute="trailing" secondItem="UE5-iP-8ka" secondAttribute="trailing" id="ZyP-Ld-gZF"/>
+                            <constraint firstItem="UE5-iP-8ka" firstAttribute="leading" secondItem="oCb-hd-W1N" secondAttribute="leading" id="xrT-xM-KQ9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oCb-hd-W1N"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Lists" id="JhI-4C-PaT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NAm-if-mDN"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="FrL-1Z-byN" kind="show" identifier="newListSegue" id="jEN-Li-4hU"/>
+                        <segue destination="A3P-iF-Nfp" kind="show" identifier="previousListsSegue" id="lF5-FC-XcK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zL7-mA-U7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="108"/>
+        </scene>
+        <!--NewList-->
+        <scene sceneID="BYE-I1-ydp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewList" id="FrL-1Z-byN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45Z-Ue-f00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="263"/>
+        </scene>
+        <!--PreviousLists-->
+        <scene sceneID="pwU-II-Yoa">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PreviousLists" id="A3P-iF-Nfp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEV-GJ-iex" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1573" y="-116"/>
+        </scene>
+    </scenes>
+</document>
