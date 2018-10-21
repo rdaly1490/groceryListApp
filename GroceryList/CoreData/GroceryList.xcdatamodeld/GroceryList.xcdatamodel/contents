@@ -12,12 +12,13 @@
     </entity>
     <entity name="GroceryListItem" representedClassName="GroceryListItem" syncable="YES" codeGenerationType="class">
         <attribute name="isComplete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="itemText" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="grocery" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Grocery" inverseName="groceryListItem" inverseEntity="Grocery" syncable="YES"/>
         <relationship name="list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroceryList" inverseName="items" inverseEntity="GroceryList" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Grocery" positionX="372.578125" positionY="-17.921875" width="128" height="88"/>
+        <element name="Grocery" positionX="392.4296875" positionY="-43.35546875" width="128" height="88"/>
         <element name="GroceryList" positionX="-11.6484375" positionY="-44.4765625" width="128" height="88"/>
-        <element name="GroceryListItem" positionX="179.88671875" positionY="-48.1171875" width="128" height="88"/>
+        <element name="GroceryListItem" positionX="179.88671875" positionY="-48.1171875" width="128" height="103"/>
     </elements>
 </model>

@@ -25,6 +25,9 @@
 		D48E804C2172791B006DB1EB /* NewList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48E804B2172791B006DB1EB /* NewList.storyboard */; };
 		D48E804E21727945006DB1EB /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E804D21727945006DB1EB /* NewListViewController.swift */; };
 		D48E80532172AAC9006DB1EB /* groceries in Resources */ = {isa = PBXBuildFile; fileRef = D48E80522172AAC9006DB1EB /* groceries */; };
+		D48E80572172F6F3006DB1EB /* NewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E80562172F6F3006DB1EB /* NewListViewModel.swift */; };
+		D48E805C217BCBDB006DB1EB /* GroceryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48E805B217BCBDB006DB1EB /* GroceryList.storyboard */; };
+		D48E805E217BCBEE006DB1EB /* GroceryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48E805D217BCBEE006DB1EB /* GroceryListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		D48E804B2172791B006DB1EB /* NewList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewList.storyboard; sourceTree = "<group>"; };
 		D48E804D21727945006DB1EB /* NewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		D48E80522172AAC9006DB1EB /* groceries */ = {isa = PBXFileReference; lastKnownFileType = file; path = groceries; sourceTree = "<group>"; };
+		D48E80562172F6F3006DB1EB /* NewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewModel.swift; sourceTree = "<group>"; };
+		D48E805B217BCBDB006DB1EB /* GroceryList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroceryList.storyboard; sourceTree = "<group>"; };
+		D48E805D217BCBEE006DB1EB /* GroceryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceryListViewController.swift; sourceTree = "<group>"; };
 		D842BD030439297CAC4CED90 /* Pods_GroceryList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroceryList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +108,7 @@
 		D48E801821716908006DB1EB /* GroceryList */ = {
 			isa = PBXGroup;
 			children = (
+				D48E805A217BCBC5006DB1EB /* GroceryList */,
 				D48E80552172AAFC006DB1EB /* Common */,
 				D48E80512172AABB006DB1EB /* Csv */,
 				D48E80502172AA9A006DB1EB /* CoreData */,
@@ -131,6 +138,7 @@
 			children = (
 				D48E804B2172791B006DB1EB /* NewList.storyboard */,
 				D48E804D21727945006DB1EB /* NewListViewController.swift */,
+				D48E80562172F6F3006DB1EB /* NewListViewModel.swift */,
 			);
 			path = NewList;
 			sourceTree = "<group>";
@@ -187,6 +195,15 @@
 				D48E804021726CB8006DB1EB /* AppDelegate+Extension.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D48E805A217BCBC5006DB1EB /* GroceryList */ = {
+			isa = PBXGroup;
+			children = (
+				D48E805B217BCBDB006DB1EB /* GroceryList.storyboard */,
+				D48E805D217BCBEE006DB1EB /* GroceryListViewController.swift */,
+			);
+			path = GroceryList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D48E80272171690A006DB1EB /* LaunchScreen.storyboard in Resources */,
+				D48E805C217BCBDB006DB1EB /* GroceryList.storyboard in Resources */,
 				D48E80242171690A006DB1EB /* Assets.xcassets in Resources */,
 				D48E801F21716908006DB1EB /* Main.storyboard in Resources */,
 				D48E804C2172791B006DB1EB /* NewList.storyboard in Resources */,
@@ -339,8 +357,10 @@
 				D48E80382171A191006DB1EB /* CoreDataController.swift in Sources */,
 				D48E802F21716AA4006DB1EB /* SeedCoreData.swift in Sources */,
 				D48E803A2171A1E0006DB1EB /* UIViewController+Extension.swift in Sources */,
+				D48E80572172F6F3006DB1EB /* NewListViewModel.swift in Sources */,
 				D48E803F21726C0B006DB1EB /* PreviousListsViewController.swift in Sources */,
 				D48E804121726CB8006DB1EB /* AppDelegate+Extension.swift in Sources */,
+				D48E805E217BCBEE006DB1EB /* GroceryListViewController.swift in Sources */,
 				D48E801A21716908006DB1EB /* AppDelegate.swift in Sources */,
 				D48E804821727206006DB1EB /* SplashViewController.swift in Sources */,
 			);

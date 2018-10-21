@@ -52,4 +52,35 @@ class CoreDataController {
             print("Could not fetch todos: \(nserror), \(nserror.userInfo)")
         }
     }
+    
+    // TODO: lowercase groceries when entering into core data then search with lowercased words
+    func fetchGrocery(from listItem: String) -> [Grocery]? {
+        let request: NSFetchRequest<Grocery> = Grocery.fetchRequest()
+        let predicate = NSPredicate(format: "name = '%@'", listItem)
+        request.predicate = predicate
+        
+        var groceries: [Grocery]?
+        do {
+            groceries = try self.context.fetch(request)
+        } catch {
+            let nserror = error as NSError
+            print("Could not fetch todos: \(nserror), \(nserror.userInfo)")
+        }
+        return groceries
+    }
+    
+    func fetchSimilarGrocery(from listItem: String) -> [Grocery]? {
+        let request: NSFetchRequest<Grocery> = Grocery.fetchRequest()
+        let predicate = NSPredicate(format: "name CONTAINS[cd] %@", listItem)
+        request.predicate = predicate
+        
+        var groceries: [Grocery]?
+        do {
+            groceries = try self.context.fetch(request)
+        } catch {
+            let nserror = error as NSError
+            print("Could not fetch todos: \(nserror), \(nserror.userInfo)")
+        }
+        return groceries
+    }
 }
